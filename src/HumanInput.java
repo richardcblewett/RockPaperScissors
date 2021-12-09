@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class HumanInput {
+import java.util.Scanner;
+
+public class HumanInput {
+    Scanner input = new Scanner(System.in);
 }
