@@ -36,11 +36,6 @@ The player can either choose to play against a computer or play against another 
 | Get standard input using a ```Scanner```                                            | Implemented                                                       |
 | Use arrays or array lists to store game history.                                    | All history is stored in an array list                            |
 
-### Silver Options 
-| Objective                                                                           | Comment                                                           |
-|-------------------------------------------------------------------------------------|-------------------------------------------------------------------|
-|
-
 ### Bonus/Gold Options
 | Description                                                                      | Comment                                                                                                                                           |
 |----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,5 +50,8 @@ The player can either choose to play against a computer or play against another 
 - Java 11 was the only language used in this project.
 
 ## Getting Started
-- Clone the repository to a local computer.
-- Open up an IDE (such as IntelliJ IDEA) and run the Main method class in the RockPaperScissors package.
+Either:   
+Clone the repository to a local computer then open up an IDE (such as IntelliJ IDEA) and run the Main method class in the RockPaperScissors package.<br>   
+
+Or:   
+Run the file: `jar/RockPaperScissors.jar`
