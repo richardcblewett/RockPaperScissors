@@ -15,6 +15,5 @@ public class History {
     //prints the list
     public void printResults() {
         results.forEach(System.out::println);
-        System.out.println("\n");
     }
 }

@@ -45,6 +45,7 @@ public class Main {
 
     public static void openingMenu(String flag) {
         if (!flag.equals("quit")) {
+            System.out.println("\n");
             System.out.println("Welcome to Rock, Paper, Scissors!\n");
             System.out.println("MAIN MENU");
             System.out.println("=====");
@@ -69,6 +70,8 @@ public class Main {
                     break;
                 }
                 case "human": {
+                    player2.setType("human");
+                    player2.setName("Player2");
                     playGame();
                     break;
                 }
@@ -90,6 +93,5 @@ public class Main {
         } else {
             System.out.println("You lose!");
         }
-        System.out.println("\n");
     }
 }
