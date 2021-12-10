@@ -31,7 +31,7 @@ public class HumanInput {
             }
             //opening menu
             case "openMenu":
-                if (s.equals("play") || s.equals("history") || s.equals("quit") || s.equals("human")) {
+                if (s.equals("play") || s.equals("history") || s.equals("herstory")|| s.equals("quit") || s.equals("human")) {
                     return true;
                 }
             default: {

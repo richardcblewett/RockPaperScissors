@@ -61,7 +61,8 @@ public class Main {
                     playGame();
                     break;
                 }
-                case "history": {
+                case "history":
+                case "herstory": {
                     history.printResults();
                     openingMenu("");
                     break;
