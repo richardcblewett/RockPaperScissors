@@ -17,13 +17,14 @@ public class HumanInput {
     }
 
     private static boolean evaluate(String s, String flag) {
-
         switch (flag) {
             //main game
             case "rps": {
                 if (Arrays.asList(Player.choicesString).contains(s)) {
                     return true;
-                } else if (s.equals("quit")) {return true;}
+                } else if (s.equals("quit")) {
+                    return true;
+                }
             }
             //naming a character
             case "name": {

@@ -73,5 +73,6 @@ public class Main {
         } else {
             System.out.println("You lose!");
         }
+        System.out.println("\n");
     }
 }
