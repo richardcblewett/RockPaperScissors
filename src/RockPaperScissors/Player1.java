@@ -1,12 +1,13 @@
 package RockPaperScissors;
 
 public class Player1 extends Player {
-    private static String name;
+    private String name;
 
     public Player1(String name) {
         this.name = name;
     }
 
+    //if we want to give player 1 the option to set their name
     public void setName(String name) {
         this.name = name;
     }

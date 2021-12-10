@@ -13,4 +13,3 @@ public abstract class Player {
         results.add(what);
     }
 }
-

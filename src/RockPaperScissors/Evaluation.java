@@ -2,8 +2,6 @@ package RockPaperScissors;
 
 public class Evaluation {
     //this takes two choices and determines the winner
-//    public static void main(String[] args) {
-//    }
     public String determineWinner(String a, String b) {
         //since history is from the player1 perspective, we can return the win/lose/draw based on that
         if (a.equals(b)) {
