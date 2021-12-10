@@ -3,26 +3,41 @@ package RockPaperScissors;
 public class Main {
     static History history = new History();
     static Player1 player1 = new Player1("Player1");
-    static Player2 player2 = new Player2("Player2", "computer");
+    static Player2 player2 = new Player2("Player2", "human");
     static Evaluation evaluation = new Evaluation();
 
-    public static void playGame() {
+    public static String playerChoicesRPS(String name) {
+        System.out.println(name +":");
         System.out.println("Type 'rock', 'paper' 'or 'scissors' to play.");
         System.out.println("Type 'quit' to go back to the main menu.");
-        String choice = HumanInput.get("rps");
+        return HumanInput.get("rps");
+    }
+
+    public static void playGame() {
+        String choice;
+        choice = playerChoicesRPS(player1.getName());
         if (!choice.equals("quit")) {
             String choice1 = player1.makeAChoice(choice);
-            String choice2 = player2.makeAChoice();
-            System.out.println(player2.getName() + " picks: " + choice2);
-            System.out.println("User picks: " + choice1);
-            String winLoseDraw = evaluation.determineWinner(choice1, choice2);
-            String p1n = player1.getName();
-            String p2n = player2.getName();
-            printResult(winLoseDraw);
-            history.addResults(winLoseDraw, p1n, choice1, p2n, choice2);
-            player1.addResults(winLoseDraw);
-            player2.addResults(evaluation.determineWinner(choice2, choice1));//results from a p2 perspective
-            openingMenu(""); //we start again!
+            //either the human makes a choice or the computer does
+            if (player2.getType().equals("human")) {
+                choice = playerChoicesRPS(player2.getName());
+            } else {
+                choice = player2.makeAChoice();
+            }
+            //we will check, but the computer choice will never be quit
+            if (!choice.equals("quit")) {
+                String choice2 = player2.makeAChoice(choice);
+                System.out.println(player2.getName() + " picks: " + choice2);
+                System.out.println("User picks: " + choice1);
+                String winLoseDraw = evaluation.determineWinner(choice1, choice2);
+                String p1n = player1.getName();
+                String p2n = player2.getName();
+                printResult(winLoseDraw);
+                history.addResults(winLoseDraw, p1n, choice1, p2n, choice2);
+                player1.addResults(winLoseDraw);
+                player2.addResults(evaluation.determineWinner(choice2, choice1));//results from a p2 perspective
+                openingMenu(""); //we start again!
+            } else openingMenu("quit");
         } else openingMenu("quit");
     }
 

@@ -20,13 +20,13 @@ This text-based game was created for a single, first-player perspective.
 The player can either choose to play against a computer or play against another human. (Since the other human will be using the same computer, this mode is only recommended for learning the rules of the game.)
 
 ### MVP Requirements
-### Features
+#### Features
 | Objective                                                                                 | Comment                                                                                                 |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Have a main menu with options for either a 2 player game or to play against the computer. | Implemented.                                                                                            |
 | When the game is over, the winner should be declared.                                     | Following the example we were given, the outcome is declared using the perspective of the first player. |
 
-### Technical
+#### Technical
 | Objective                                                                           | Comment                                                           |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | Use classes to remove repetitive parts of the code.                                 | Implemented                                                       |
@@ -36,7 +36,12 @@ The player can either choose to play against a computer or play against another 
 | Get standard input using a ```Scanner```                                            | Implemented                                                       |
 | Use arrays or array lists to store game history.                                    | All history is stored in an array list                            |
 
-### Bonus Options
+### Silver Options 
+| Objective                                                                           | Comment                                                           |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+|
+
+### Bonus/Gold Options
 | Description                                                                      | Comment                                                                                                                                           |
 |----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Automated JUnit tests.                                                           |                                                                                                                                                   |
