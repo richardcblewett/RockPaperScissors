@@ -9,10 +9,10 @@ public class HumanInput {
         String s = "";
         Scanner input = new Scanner(System.in);
         do {
-            s = input.nextLine();
-            goodInput = evaluate(s, flag);
+            s = input.next();
+            goodInput = evaluate(s.toLowerCase(), flag);
         } while (!goodInput);
-        input.close();
+        //input.close();
         return s.toLowerCase();
     }
 
@@ -21,7 +21,7 @@ public class HumanInput {
         switch (flag) {
             //main game
             case "rps": {
-                if (Arrays.stream(Player.choicesString).anyMatch( elem -> elem.equals(s))) {
+                if (Arrays.stream(Player.choicesString).anyMatch(elem -> elem.equals(s))) {
                     return true;
                 }
             }
@@ -29,9 +29,11 @@ public class HumanInput {
             case "name": {
             }
             //opening menu
-            case "openMenu": {
-            }
-            //fallback
+            case "openMenu":
+                if (s.equals("play") || s.equals("history") || s.equals("quit")) {
+                    return true;
+                }
+                //fallback
             default: {
             }
         }
