@@ -7,6 +7,7 @@ public class Main {
     static Evaluation evaluation = new Evaluation();
 
     public static String playerChoicesRPS(String name) {
+        System.out.println("\n");
         System.out.println(name +":");
         System.out.println("Type 'rock', 'paper' 'or 'scissors' to play.");
         System.out.println("Type 'quit' to go back to the main menu.");
@@ -27,6 +28,7 @@ public class Main {
             //we will check, but the computer choice will never be quit
             if (!choice.equals("quit")) {
                 String choice2 = player2.makeAChoice(choice);
+                System.out.println("\n");
                 System.out.println(player2.getName() + " picks: " + choice2);
                 System.out.println("User picks: " + choice1);
                 String winLoseDraw = evaluation.determineWinner(choice1, choice2);
