@@ -15,11 +15,13 @@ public class Main {
             String choice2 = player2.makeAChoice();
             System.out.println(player2.getName() + " picks: " + choice2);
             System.out.println("User picks: " + choice1);
-            String win = evaluation.determineWinner(choice1, choice2);
+            String winLoseDraw = evaluation.determineWinner(choice1, choice2);
             String p1n = player1.getName();
             String p2n = player2.getName();
-            printResult(win);
-            history.addResults(win, p1n, choice1, p2n, choice2);
+            printResult(winLoseDraw);
+            history.addResults(winLoseDraw, p1n, choice1, p2n, choice2);
+            player1.addResults(winLoseDraw);
+            player2.addResults(evaluation.determineWinner(choice2, choice1));//results from a p2 perspective
             openingMenu(""); //we start again!
         } else openingMenu("quit");
     }
