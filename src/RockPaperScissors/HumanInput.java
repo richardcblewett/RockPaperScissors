@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class HumanInput {
     public static String get(String flag) {
-        boolean goodInput = false;
-        String s = "";
+        boolean goodInput;
+        String s;
         Scanner input = new Scanner(System.in);
         do {
             s = input.next();
@@ -21,9 +21,9 @@ public class HumanInput {
         switch (flag) {
             //main game
             case "rps": {
-                if (Arrays.stream(Player.choicesString).anyMatch(elem -> elem.equals(s))) {
+                if (Arrays.asList(Player.choicesString).contains(s)) {
                     return true;
-                } else if (s.equals("quit")) {return true;};
+                } else if (s.equals("quit")) {return true;}
             }
             //naming a character
             case "name": {
@@ -34,6 +34,7 @@ public class HumanInput {
                     return true;
                 }
             default: {
+                System.out.println("Invalid entry: please make another selection.");
             }
         }
         return false;
