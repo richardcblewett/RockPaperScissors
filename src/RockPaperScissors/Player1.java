@@ -19,5 +19,9 @@ public class Player1 extends Player {
     String makeAChoice() {
         return HumanInput.get("rps");
     }
+
+    String makeAChoice(String choice) {
+        return choice;
+    }
 }
 

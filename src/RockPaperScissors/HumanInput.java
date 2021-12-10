@@ -23,7 +23,7 @@ public class HumanInput {
             case "rps": {
                 if (Arrays.stream(Player.choicesString).anyMatch(elem -> elem.equals(s))) {
                     return true;
-                }
+                } else if (s.equals("quit")) {return true;};
             }
             //naming a character
             case "name": {

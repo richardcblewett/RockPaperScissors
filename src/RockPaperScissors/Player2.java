@@ -30,10 +30,14 @@ public class Player2 extends Player {
     String makeAChoice() {
         String choice = "";
         if (type.equals("computer")) {
-            choice = choicesString[(int)Math.round(Math.random() * 2)];
+            choice = choicesString[(int) Math.round(Math.random() * 2)];
         } else {
             choice = HumanInput.get("rps");
         }
+        return choice;
+    }
+
+    String makeAChoice(String choice) {
         return choice;
     }
 }
