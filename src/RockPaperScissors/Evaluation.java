@@ -4,33 +4,20 @@ public class Evaluation {
     //this takes two choices and determines the winner
 //    public static void main(String[] args) {
 //    }
-
-    public void determineWinner(String choiceA, String choiceB) {
-        //since history is from the player1 perspective, we can return the win/lose/draw based on that
-        String winLoseDraw = winningChoice(choiceA, choiceB);
-
-
-    }
-
-    //looks at the choices and determines the winning choice
-    private static String winningChoice(String a, String b) {
+    public String determineWinner(String a, String b) {
         //since history is from the player1 perspective, we can return the win/lose/draw based on that
         if (a.equals(b)) {
-            return "D";
+            return "DRAW";
         } //draw - chose again
         else {
             switch (a) {
                 case "rock":
-                    return b.equals("paper") ? "L" : "W";
+                    return b.equals("paper") ? "LOSS" : "WIN";
                 case "paper":
-                    return b.equals("rock") ? "W" : "L";
+                    return b.equals("rock") ? "WIN" : "LOSS";
                 default /*scissors*/:
-                    return b.equals("rock") ? "L" : "W";
+                    return b.equals("rock") ? "LOSS" : "WIN";
             }
         }
-    }
-    //storing history - win/loss/draw | player1 name | player1 pick | other pick
-    private static void recordWin(String result, String player1pick, String player2pick) {
-        history.addResults([result,player1pick,player1pick])
     }
 }

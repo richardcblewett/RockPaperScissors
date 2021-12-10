@@ -12,8 +12,7 @@ public class Player {
         return name;
     }
 
-
-    public void makeAChoice()//want to use an optional for player or computer
-    {}
+    public static String makeAChoice()//want to use an optional for player or computer
+    {return " ";}
 
 }
