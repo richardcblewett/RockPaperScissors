@@ -14,8 +14,6 @@ public class Main {
         String win = evaluation.determineWinner(choice1, choice2);
         String p1n = player1.getName();
         String p2n = player2.getName();
-        System.out.println(p1n);
-        System.out.println(p2n);
         printResult(win);
         history.addResults(win, p1n, choice1, p2n, choice2);
         openingMenu(); //we start again!
@@ -30,10 +28,10 @@ public class Main {
         System.out.println("3. Type 'quit' to stop playing.\n");
         String text = HumanInput.get("openMenu");
         switch (text) {
-            case "play": {playGame();}
-            case "history": {history.printResults();openingMenu();}
-            case "quit": {;}
-            default:{;}
+            case "play": {playGame();break;}
+            case "history": {history.printResults();openingMenu();break;}
+            case "quit": {break;}
+            default:{}
         }
     }
 

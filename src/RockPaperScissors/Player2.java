@@ -6,7 +6,7 @@ public class Player2 extends Player {
         this.name = name;
     }
     public void setName(String name) {this.name = name;}
-    public static String getName() {
+    public String getName() {
         return name;
     }
 }
