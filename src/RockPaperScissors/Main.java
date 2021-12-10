@@ -3,10 +3,10 @@ package RockPaperScissors;
 public class Main {
     static History history = new History();
     static Player1 player1 = new Player1("Ernie");
-    static Player2 player2 = new Player2("Bert");
+    static Player2 player2 = new Player2("Bert", "computer");
     static Evaluation evaluation = new Evaluation();
 
-    public static void playGame() {
+   public static void playGame() {
         String choice1 = player1.makeAChoice();
         String choice2 = player2.makeAChoice();
         System.out.println(player2.getName() + " picks: " + choice2);
@@ -23,14 +23,16 @@ public class Main {
         System.out.println("Welcome to Rock, Paper, Scissors!\n");
         System.out.println("MAIN MENU");
         System.out.println("=====");
-        System.out.println("1. Type 'play' to play.");
-        System.out.println("2. Type 'history' to view your game history.");
-        System.out.println("3. Type 'quit' to stop playing.\n");
+        System.out.println("1. Type 'play' to play another human.");
+        System.out.println("2. Type 'computer' to play the computer.");
+        System.out.println("3. Type 'history' to view your game history.");
+        System.out.println("4. Type 'quit' to stop playing.\n");
         String text = HumanInput.get("openMenu");
         switch (text) {
             case "play": {playGame();break;}
             case "history": {history.printResults();openingMenu();break;}
             case "quit": {break;}
+            case "computer": {player2.setType(text);playGame();break;}
             default:{}
         }
     }

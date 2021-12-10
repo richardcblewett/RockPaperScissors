@@ -1,10 +1,10 @@
 package RockPaperScissors;
 
-public class Player {
+public abstract class Player {
 
-    public static String[] choicesString = {"rock","paper","scissors"};
+    public static String[] choicesString = {"rock", "paper", "scissors"};
 
-    public String makeAChoice()//want to use an optional for player or computer
-    {return " ";}
+    abstract String makeAChoice();//want to use an optional for player or computer
+
 }
 
